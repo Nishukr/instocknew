@@ -6,7 +6,6 @@ Instock is a  financial platform designed to provide users with an efficient, se
 
 ## ✨ Features
 - **User Authentication**: Secure login and registration system.
-- **Stock Market Data**: Real-time updates on stock prices and trends.
 - **Portfolio Management**: Track investments and returns in a personalized dashboard.
 - **Interactive UI**: A responsive and user-friendly interface.
 - **Easy Transactions**: Easy payment and fund withdrawal system.
@@ -23,6 +22,8 @@ React.js – UI Framework for creating a dynamic frontend.
 Axios – Handles API requests efficiently.
 
 Tailwind CSS / Material UI – For a clean and modern UI.
+
+Chart.js: Provides dynamic and interactive financial data visualizations.
 
 React Router – Enables seamless page navigation.
 
@@ -50,6 +51,10 @@ CORS – Enables cross-origin requests.
 Dotenv – Loads environment variables securely.
 
 Nodemon – Auto-restarts backend on code changes.
+
+📊 Data Visualization
+
+Chart.js: Implements interactive stock trends and portfolio performance graphs.
 
 
 ## 🚀 Installation & Setup
@@ -90,6 +95,9 @@ Nodemon – Auto-restarts backend on code changes.
 | POST | `/api/auth/register` | Registers a new user |
 
 
+[Watch Demo](D:\Reactp\frontend\public\media\images\React App - Google Chrome 2025-02-28 11-27-16.mp4)
+
+
 
 
 
@@ -98,5 +106,7 @@ This project is licensed under the **MIT License**.
 
 ---
 💡 **Developed by Nishu Kumar**
+
+Contact:- nishukumar9752@gmail.com
 
 
