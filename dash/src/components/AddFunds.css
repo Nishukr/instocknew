@@ -1,0 +1,94 @@
+/* Add Funds Page Styles */
+.add-funds-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group select,
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-funds-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-funds-btn:hover {
+    background-color: #0056b3;
+}
+
+.wallet-balance {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #d9534f;
+}
+
+.captcha-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .captcha {
+    font-size: 20px;
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .captcha-box button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
