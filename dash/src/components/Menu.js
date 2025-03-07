@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Menu = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState(null);
+  const [userName, setUserName] = useState(""); // Added state for username
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -11,12 +12,14 @@ const Menu = () => {
     if (storedUser) {
       setIsLoggedIn(true);
       setUserId(storedUser.userId);
+      setUserName(storedUser.name); // Extract and set user name
     }
   }, []);
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setUserId(null);
+    setUserName(""); // Clear user name on logout
     localStorage.removeItem("user");
   };
 
@@ -46,8 +49,8 @@ const Menu = () => {
         <div className="profile">
           {isLoggedIn ? (
             <>
-              <div className="avatar">NK</div>
-              <p className="username">User: {userId}</p>
+              {/* <div className="avatar">NK</div> */}
+              <p className="username"> {userName}</p> {/* Updated to use userName */}
               <button onClick={handleLogout} className="logout-btn">
                 Logout
               </button>
