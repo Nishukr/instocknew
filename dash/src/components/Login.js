@@ -4,12 +4,13 @@ import "./Login.css";
 
 function Login() {
     const [formData, setFormData] = useState({
+        name: "",  // Added name field
         email: "",
         password: "",
-    }); //  Added useState for formData
+    });
 
-    const [message, setMessage] = useState(""); //  Added useState for message
-    const navigate = useNavigate(); //  Defined navigate hook
+    const [message, setMessage] = useState(""); 
+    const navigate = useNavigate(); 
 
     const handleChange = (e) => {
         setFormData({
@@ -28,21 +29,23 @@ function Login() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(formData), // Sending name to backend too
             });
     
             const data = await response.json();
             if (response.ok) {
                 setMessage("Login successful!");
     
-                //  Store login status in localStorage
+                // Store login status and user details in localStorage
                 localStorage.setItem("isLoggedIn", "true");
-    
-                //  Store user ID in localStorage
+
                 const userId = data.userId || "USR" + Math.floor(100000 + Math.random() * 900000);
-                localStorage.setItem("user", JSON.stringify({ userId }));
+                localStorage.setItem("user", JSON.stringify({ 
+                    userId, 
+                    name: formData.name // Storing username 
+                }));
     
-                //  Redirect to HomePage
+                // Redirect to HomePage
                 setTimeout(() => {
                     navigate("/");
                 }, 1500);
@@ -54,13 +57,22 @@ function Login() {
         }
     };
     
-
     return (
         <div className="login-container">
             <div className="login-box">
                 <h2 className="login-title">Login Here</h2>
                 {message && <p className="login-message">{message}</p>}
                 <form onSubmit={handleSubmit}>
+                    <div className="input-group">
+                        <label>Name</label>
+                        <input 
+                            type="text"  // Changed to text type
+                            name="name" 
+                            value={formData.name} 
+                            onChange={handleChange} 
+                            required 
+                        />
+                    </div>
                     <div className="input-group">
                         <label>Email Address</label>
                         <input 
